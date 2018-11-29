@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+
+Route::get('/test',[
+    'uses' => 'MainController@test',
+    'as' => 'test'
+]);
+
+Route::post('/getvideo',[
+    'uses' => 'MainController@crawlData',
+    'as' => 'crawldata'
+]);

@@ -18,4 +18,11 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    AddType application/octet-stream .mp3
+    AddType application/octet-stream .mp4
+    AddType application/octet-stream .avi
+    AddType application/octet-stream .mpg
+    AddType application/octet-stream .mov
+    AddType application/octet-stream .pdf
 </IfModule>
