@@ -7,17 +7,6 @@ use Goutte;
 
 class MainController extends Controller
 {    
-
-
-
-    public function test(){
-        $scraper = Goutte::request('GET','http://vm.tiktok.com/JUj3rf/');
-        $html = $scraper->html();
-        dd($html);
-        $cover = $this->get_string_between($html,'"origin_cover":{"url_list":["','","');
-        $video = $this->get_string_between($html,'"play_addr":{"url_list":["','","');
-    }
-
     public function test2(Request $request){
         $response = array(
             'status' => 'success',

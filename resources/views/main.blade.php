@@ -3,15 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TIKTOK Converter</title>
+    <title>TikTok Downloader</title>
+    <meta name="description" content="A website that allows you to download tiktok videos on mp4, mp3 formats">
+    <link rel="icon" href="{{asset('images/logo.svg')}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-grid.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-reboot.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 
 </head>
 <body>
@@ -19,7 +21,7 @@
     <!-- Logo -->
     <section class="container">
         <div class="logo-container text-center">
-            <img class="d-block mx-auto" src="images/logo.svg" id="logo" alt="">
+            <img class="d-block mx-auto" src="{{asset('images/logo.svg')}}" id="logo" alt="">
         </div>
     </section>
     <!-- Search Bar-->
@@ -62,10 +64,7 @@
     <footer class="text-center">
         TIKTOK DOWNLOADER 2018
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Jquery -->
+    <script src="{{asset('js/jquery.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
