@@ -29,8 +29,7 @@ class MainController extends Controller
 
 
     public function downloadVideo(Request $request){
-        $video_link = 'http://' . $request->url;
-        $video_link = str_replace('\\','/',$video_link);
+        $video_link = $request->url;
         header('Content-Type: application/octet-stream');
         header('Content-Transfer-Encoding: Binary'); 
         $file_name = 'video.mp4';

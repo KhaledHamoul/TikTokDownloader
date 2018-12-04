@@ -5,6 +5,7 @@ $(document).ready(function(){
     var $result_container = $('#result-container').hide();
     var $url_text_container = $('.url-text-container');
     var $url_text_response = $('#url-text-response');
+    var $first_load = true;
     $(document)
     .ajaxStart(function () {
         $loading.show();
@@ -35,13 +36,33 @@ $(document).ready(function(){
                   },
                   dataType: 'JSON',
                   success: function(result){
-                      console.log(result);
-                      $('#downloadInput').val(result.video);
-                      console.log(result.video);
+                      var formatted_link = 'http://' + result.video.replace(/\\/g,'/');
+                      $('#downloadInput').val(formatted_link);
                       if(result.video === ''){
                         $url_text_response.text('Could not retrieve video from url');
                         $url_text_container.show().delay(5000).fadeOut();
                       }else{
+                        if($first_load === true){
+                            $first_load = false;
+                            var video = $('<video />', {
+                                id: 'tiktok_video',
+                                src: formatted_link,
+                                type: 'video/mp4',
+                                width: '80%',
+                                controls: true
+                            });
+                            video.appendTo($('#video-container'));
+                        }else{
+                            $('#video-container').empty();
+                            var video = $('<video />', {
+                                id: 'tiktok_video',
+                                src: formatted_link,
+                                type: 'video/mp4',
+                                width: '80%',
+                                controls: true
+                            });
+                            video.appendTo($('#video-container'));
+                        }
                         $('#result-container').show();
                       }
                   },

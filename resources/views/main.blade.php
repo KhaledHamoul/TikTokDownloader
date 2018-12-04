@@ -55,9 +55,6 @@
         <div id="result-container">
             <div class="row">
                 <div class="col-sm-6 text-center" id="video-container">
-                    <video id="tiktok_video" width="80%" controls>
-                        <source type="video/mp4" src="http://m-v16.akamaized.net//10503f67224fca7b63c3cb762a7586a4//5c06219a//video//n//v0102//421ed2443a0348e6b2abd0a9c0b15d4c//?rc=amdmZmtza2x2aDMzOzgzM0ApQHRAbzdEMzU0NTM0NDw0OzY1OzNAKXUpQGczdylAZmV6ZXpvZnZwZjY1QHItcWxmY2Bmcl8tLTMvNHNzNW8jbyMxNC8zNS8uLS0uMS4tLi4vaTpiLW8jOmAtbyNiK2IrXmZyOiMwLl4%3D">
-                    </video>
                 </div>
                 <div class="col-sm-6 text-center">
                     <a id="downloadbutton" class="button-class" type="button"><i class="fas fa-download"></i> Video</a>
