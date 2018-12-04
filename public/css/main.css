@@ -56,7 +56,7 @@ body::after{
     height: 100%;
 }
 .search-bar-global-container{
-    margin-top: 200px;
+    margin-top: 120px;
     margin-bottom: 100px;
 }
 .search-bar-global-container h1{
@@ -133,63 +133,67 @@ body::after{
 
 #result-container{
     display: none;
-}
-.result{
     margin-bottom: 200px;
-    width: 100%;
 }
 
-.img-container{
-    position: relative;
+.downloads-container{
+    padding: 20px;
 }
 
-.cover{
-    position: relative !important;
+.downloads-container > p{
+    font-weight: bold;
+    font-size: 25px;
+}
+#video-container{
+    margin-bottom: 25px !important;
 }
 
-.download-button{
-    font-size: 30px !important;
-    border-radius: 10px !important;
-    position: absolute;
-    width: 30%;
-    left: 35%;
-    top: 50%;
-    padding: 15px !important;
-    background: #d9003e !important;
-    border: 1px solid #d9003e !important;
-    outline: 0 !important;
+.button-class{
+    padding: 15px 15%;
+    border-radius: 5px;
+    font-size: 25px;
+    display: block;
+    width: 75%;
+    margin: 20px auto;
 }
-.download-button:active, .download-button:visited .download-button:focus{
-    border: 1px solid #d9003e !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background: none;
+
+.button-class:hover{
+    cursor: pointer;
 }
 
 
-/* code hover */
-.overlay-image {
-    margin: 0 auto;
-    position: relative;
-    width: 30%;
-    min-width: 250px;
+#downloadbutton {
+    margin-top: 50%;
+    background: #d9003e;
+    color: white;
+    box-shadow: 5px 8px #00f8f1;
 }
 
-.overlay-image .hover {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
+#downloadbutton:active{
+    box-shadow: 0 0 #fff;
+    transform: translateX(5px);
+    transform: translateY(8px);
 }
 
-.overlay-image:hover .hover {
-    opacity: 1;
+#downloadbuttonMP3{
+    background: #00f8f1;
+    box-shadow: 5px 8px #d9003e;
+    color: #333;
 }
 
-.overlay-image .hover {
-    background-color: rgba(0,0,0,0.5);
+#downloadbuttonMP3:active{
+    box-shadow: 0 0 #fff;
+    transform: translateX(5px);
+    transform: translateY(8px);
+}
+
+
+#download_form{
+    display: none;
+}
+
+.col-centered{
+    margin: 0 auto !important;
 }
 
 footer{ 
@@ -199,7 +203,7 @@ footer{
     width: 100%;
     background: #00f8f1;
     line-height: 4em;
-    color: #777;
+    color: #666;
     font-family: 'Montserrat',monospace,sans-serif;
 }
 
@@ -255,20 +259,46 @@ footer{
 
   /* Media Queries */
   @media screen and (max-width: 575px) {
-      .search-bar-row{
-          border: none;
-      }
-      #search-bar{
-          margin: 0 !important;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-      }
-      .search-bar-submit{
-          margin: 20px 0 !important;
-      }
+
   }
   @media screen and (max-width: 485px) {
     .title-container{
         padding: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .button-class{
+        font-size: 17px;
+    }
+    #tiktok_video{
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+
+    .search-bar-row{
+        border: none;
+    }
+    #search-bar{
+        margin: 0 !important;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .search-bar-submit{
+        margin: 20px 0 !important;
+    }
+
+    #tiktok_video{
+        text-align: center !important;
+    }
+    
+    #downloadbutton{
+        margin-top: 0%;
+    }
+
+    footer{
+        font-size: 12px;
     }
   }

@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TikTok Downloader</title>
-    <meta name="description" content="A website that allows you to download tiktok videos on mp4, mp3 formats">
+    <title>Tik Tok video and mp3 downloader</title>
+    <meta name="description" content="Download your favorite Tik Tok videos in a second. You can get your video in the mp3 or mp4 format.">
     <link rel="icon" href="{{asset('images/logo.svg')}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" type="text/css" href="{{asset('css/fa.min.css')}}">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-grid.min.css')}}">
@@ -27,8 +28,8 @@
     <!-- Search Bar-->
     <section class="container search-bar-global-container text-center">
         <div class="title-container">
-            <h1 id="main-title">Online TikTok Video Downloader</h1>
-            <p id="main-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus nisi, euismod id tincidunt eu, feugiat id elit. Nunc imperdiet placerat fermentum. Maecenas nec egestas nisi. Ut ex diam, finibus et mi at, venenatis pulvinar sem.</p>
+            <h1 id="main-title">Tik Tok video and mp3 downloader</h1>
+            <p id="main-para">Tiktok-downloader.com is a tool that allows you to easily download your favorite Tik Tok / Musicaly videos. You can download your video in mp4 or mp3.</p>
         </div>
         <div class="search-bar-container container text-center">
                 <div class="row search-bar-row">
@@ -50,16 +51,25 @@
                 </div>
                 <div class="loader" id="main-loader"></div>
             </div>
-            <div class="col-sm-12 text-center result" id="result-container">
-                <div class="overlay-image">
-                    <img alt="" id="videocover" class="rounded mx-auto d-block img-thumbnail cover">
-                    <div class="normal"></div>
-                    <div class="hover">
-                        <a download id="videolink" href="" type="button" class="btn btn-success download-button" target="_blank"><i class="fas fa-download"></i></a>
-                    </div>
+        </div>
+        <div id="result-container">
+            <div class="row">
+                <div class="col-sm-6 text-center" id="video-container">
+                    <video id="tiktok_video" width="80%" controls>
+                        <source type="video/mp4" src="http://m-v16.akamaized.net//10503f67224fca7b63c3cb762a7586a4//5c06219a//video//n//v0102//421ed2443a0348e6b2abd0a9c0b15d4c//?rc=amdmZmtza2x2aDMzOzgzM0ApQHRAbzdEMzU0NTM0NDw0OzY1OzNAKXUpQGczdylAZmV6ZXpvZnZwZjY1QHItcWxmY2Bmcl8tLTMvNHNzNW8jbyMxNC8zNS8uLS0uMS4tLi4vaTpiLW8jOmAtbyNiK2IrXmZyOiMwLl4%3D">
+                    </video>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <a id="downloadbutton" class="button-class" type="button"><i class="fas fa-download"></i> Video</a>
+                    <a id="downloadbuttonMP3" class="button-class" type="button"><i class="fas fa-headphones"></i> Song</a>
                 </div>
             </div>
         </div>
+        <form id="download_form" action="{{Route('download_video')}}" method="post">
+            {{csrf_field()}}
+            <input type="text" name="url" id="downloadInput">
+            <input type="submit">
+        </form>
     </section>
     <footer class="text-center">
         TIKTOK DOWNLOADER 2018
@@ -67,6 +77,8 @@
     <script src="{{asset('js/jquery.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <!-- font-awesome -->
+    <script src="{{asset('js/fa.min.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>

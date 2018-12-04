@@ -36,15 +36,14 @@ $(document).ready(function(){
                   dataType: 'JSON',
                   success: function(result){
                       console.log(result);
-                      $('#videocover').attr('src',result.cover);
-                      $('#videolink').attr('href',result.video);
-                      if(result.cover === ''){
+                      $('#downloadInput').val(result.video);
+                      console.log(result.video);
+                      if(result.video === ''){
                         $url_text_response.text('Could not retrieve video from url');
                         $url_text_container.show().delay(5000).fadeOut();
                       }else{
-
+                        $('#result-container').show();
                       }
-                      $('#result-container').show();
                   },
                   error: function(jqXHR, textStatus, error){
                       console.log(error);
@@ -73,5 +72,10 @@ $(document).ready(function(){
     .ajaxStop(function() {
         $(this).hide();
     });
+
+
+    $('#downloadbutton').click(function(e){
+        $('#download_form').submit();
+    })
 
   });
