@@ -218,7 +218,6 @@ footer{
     width: 100%;
     background: #00f8f1;
     line-height: 4em;
-    color: #666;
     font-family: 'Montserrat',monospace,sans-serif;
 }
 
@@ -316,7 +315,7 @@ footer{
     footer{
         font-size: 12px;
     }
-  }
+}
 
 
   
