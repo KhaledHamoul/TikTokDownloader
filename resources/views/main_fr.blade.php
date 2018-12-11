@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130665214-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-130665214-1');
+    </script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Téléchargez vos vidéos Tik Tok préférés</title>
@@ -22,7 +31,7 @@
     <!-- Logo -->
     <section class="container">
         <div class="logo-container text-center">
-            <img class="d-block mx-auto" src="{{asset('images/logo.svg')}}" id="logo" alt="">
+            <img class="d-block mx-auto" src="{{asset('images/header.svg')}}" id="logo" alt="">
         </div>
     </section>
     <!-- Search Bar-->
