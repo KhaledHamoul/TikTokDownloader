@@ -20,9 +20,17 @@ class MainController extends Controller
         $scraper = Goutte::request('GET', $request->page);
         $html = $scraper->html();
         $video = $this->get_string_between($html,'"play_addr":{"url_list":["\/\/','","');
+        $cover = $this->get_string_between($html,'"music":{"cover_hd":{"url_list":["','"');
+        $user =  $this->get_string_between($html,'">@','</p>');
+        $author =  $this->get_string_between($html,'"author_name":"','","');
+        $song = $this->get_string_between($html,'"title":"','","');
         $response = array(
             'status' => 'success',
-            'video' => $video
+            'video' => $video,
+            'cover' => $cover,
+            'author' => $author,
+            'user' => $user,
+            'song' => $song
         );
         return response()->json($response);
     }

@@ -150,24 +150,52 @@ body::after{
 
 .button-class{
     padding: 15px 15%;
-    border-radius: 5px;
-    font-size: 25px;
+    border-radius: 20px;
+    font-size: 22px;
     display: block;
     width: 75%;
-    margin: 20px auto;
+    margin: 0px auto;
+}
+
+#download_listen_container{
+    margin-top: 20px;
+}
+
+.button-class-secondary{
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
 .button-class:hover{
     cursor: pointer;
 }
 
+.button-class-secondary:hover{
+    cursor: pointer;
+}
+
 
 #downloadbutton {
-    margin-top: 50%;
+    margin-top: 60%;
+    background: #d9003e;
+    color: white;
+    box-shadow: 2px 4px 4px #00f8f1;
+}
+
+
+#downloadbuttonsecondary{
     background: #d9003e;
     color: white;
     box-shadow: 5px 8px #00f8f1;
 }
+
+#listenbutton{
+    background: #00f8f1;
+    color: #333;
+    box-shadow: 2px 4px #d9003e;
+}
+
 
 #downloadbutton:active{
     box-shadow: 0 0 #fff;
@@ -175,16 +203,16 @@ body::after{
     transform: translateY(8px);
 }
 
-#downloadbuttonMP3{
-    background: #00f8f1;
-    box-shadow: 5px 8px #d9003e;
-    color: #333;
+#downloadbuttonsecondary:active{
+    box-shadow: 0 0 #fff;
+    transform: translateX(2px);
+    transform: translateY(4px);
 }
 
-#downloadbuttonMP3:active{
+#listenbutton:active{
     box-shadow: 0 0 #fff;
-    transform: translateX(5px);
-    transform: translateY(8px);
+    transform: translateX(2px);
+    transform: translateY(4px);
 }
 
 
@@ -272,8 +300,12 @@ footer{
 
 
   /* Media Queries */
-  @media screen and (max-width: 575px) {
-
+  @media screen and (max-width: 995px) {
+    .button-class-secondary{
+        padding: 12px 8px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
   }
   @media screen and (max-width: 485px) {
     .title-container{
@@ -285,13 +317,22 @@ footer{
     .button-class{
         font-size: 17px;
     }
+    .button-class-secondary{
+        padding: 12px 8px;
+        border-radius: 5px;
+        font-size: 12px;
+        display: block;
+        margin: 10px 5px;
+    }
     #tiktok_video{
         width: 90%;
     }
   }
 
   @media screen and (max-width: 575px) {
-
+    .button-class{
+        font-size: 14px;
+    }
     .search-bar-row{
         border: none;
     }
@@ -309,7 +350,15 @@ footer{
     }
     
     #downloadbutton{
-        margin-top: 0%;
+        margin: 50px auto;
+    }
+
+    #download_listen_container{
+        margin: 50px auto;
+    }
+
+    #video-container{
+        margin : 20px auto;
     }
 
     footer{

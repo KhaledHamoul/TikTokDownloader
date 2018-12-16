@@ -36,8 +36,10 @@ $(document).ready(function(){
                   },
                   dataType: 'JSON',
                   success: function(result){
-                      var formatted_link = 'http://' + result.video.replace(/\\/g,'/');
-                      $('#downloadInput').val(formatted_link);
+                      console.log(result);
+                      var formatted_video_link = 'https://' + result.video.replace(/\\/g,'/');
+                      var formatted_cover_link = 'https://' + result.cover.replace(/\\/g,'/');
+                      $('#downloadInput').val(formatted_video_link);
                       if(result.video === ''){
                         $url_text_response.text('Could not retrieve video from url');
                         $url_text_container.show().delay(5000).fadeOut();
@@ -46,22 +48,34 @@ $(document).ready(function(){
                             $first_load = false;
                             var video = $('<video />', {
                                 id: 'tiktok_video',
-                                src: formatted_link,
+                                src: formatted_video_link,
                                 type: 'video/mp4',
                                 width: '80%',
                                 controls: true
                             });
-                            video.appendTo($('#video-container'));
+                            video.prependTo($('#video-container'));
                         }else{
-                            $('#video-container').empty();
+                            $('#tiktok_video').remove();
                             var video = $('<video />', {
                                 id: 'tiktok_video',
-                                src: formatted_link,
+                                src: formatted_video_link,
                                 type: 'video/mp4',
                                 width: '80%',
                                 controls: true
                             });
-                            video.appendTo($('#video-container'));
+                            video.prependTo($('#video-container'));
+                        }
+                        if(result.song.indexOf('original sound') >= 0){
+                            $('#cover_container').hide();
+                            $('#download_listen_container').hide();
+                            $('#normal_container').show();
+                        }else{
+                            $('#tiktok_user').text('posted by:' + result.user);
+                            $('#tiktok_song_author_song').text(result.author + ':' + result.song);
+                            $('#tiktok_song_cover').attr("src",formatted_cover_link);
+                            $('#cover_container').show();
+                            $('#download_listen_container').show();
+                            $('#normal_container').hide();
                         }
                         $('#result-container').show();
                       }
@@ -96,6 +110,10 @@ $(document).ready(function(){
 
 
     $('#downloadbutton').click(function(e){
+        $('#download_form').submit();
+    })
+
+    $('#downloadbuttonsecondary').click(function(e){
         $('#download_form').submit();
     })
 

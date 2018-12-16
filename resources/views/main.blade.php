@@ -39,6 +39,7 @@
         <div class="title-container">
             <h1 id="main-title">Tik Tok video and mp3 downloader</h1>
             <p id="main-para">Tiktok-downloader.com is a tool that allows you to easily download your favorite Tik Tok / Musicaly videos. You can download your video in mp4 or mp3.</p>
+            <a href="https://youtu.be/e89FGeXDPxI" class="text-info" id="howto" target="_blank">How to download?</a>
         </div>
         <div class="search-bar-container container text-center">
                 <div class="row search-bar-row">
@@ -63,10 +64,51 @@
         </div>
         <div id="result-container">
             <div class="row">
-                <div class="col-sm-6 text-center" id="video-container">
+                <div class="col-sm-6 order-3 order-sm-1 text-center" id="video-container">
                 </div>
-                <div class="col-sm-6 text-center">
-                    <a id="downloadbutton" class="button-class" type="button"><i class="fas fa-download"></i>Download MP4</a>
+                <div class="col-sm-6 order-1 order-sm-2 text-center" id="normal_container">
+                    <a id="downloadbutton" class="button-class" type="button"><i class="fas fa-download"></i> Download MP4</a>
+                </div>
+                <div id="cover_container" class="col-sm-6 order-sm-3 text-center">
+                        <div class="row">
+                            <div class="col-sm-12 order-2 order-sm-1">
+                                <!-- Card Narrower -->
+                                <div class="card card-cascade narrower">
+                                    <div class="row">
+                                        <div class="col-sm-12 order-2 order-sm-1">
+                                            <!-- Card image -->
+                                            <div class="view view-cascade overlay">
+                                                <img id="tiktok_song_cover" class="card-img-top" src="" alt="Card image cap">
+                                                <a>
+                                                <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 order-1 order-sm-2">
+                                            <!-- Card content -->
+                                            <div class="card-body card-body-cascade">
+                                                <!-- Label -->
+                                                <h5 class="pink-text pb-2 pt-1"><i class="fa fa-music"></i> Music</h5>
+                                                <!-- Title -->
+                                                <h4 id="tiktok_song_author_song" class="font-weight-bold card-title"></h4>
+                                                <!-- Text -->
+                                                <p id="tiktok_user" class="card-text"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 order-1 order-sm-2" id="download_listen_container">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <a id="downloadbuttonsecondary" class="button-class-secondary" type="button"><i class="fas fa-download"></i> Download MP4</a>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <a id="listenbutton" class="button-class-secondary" type="button"><i class="fas fa-music"></i> Listen MP3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
