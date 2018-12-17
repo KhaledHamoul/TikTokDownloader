@@ -1,18 +1,3 @@
-/* custom fonts */
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Montserrat-bold';
-    src: url('../fonts/Montserrat-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'Montserrat-italic';
-    src: url('../fonts/Montserrat-Italic.ttf');
-}
 
 *{
     margin: 0;
@@ -26,7 +11,7 @@ body{
     margin: 0;
     padding: 0;
     margin-bottom: 4em;
-    font-family: 'Montserrat',monospace,sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 body::after{
     content:'';
@@ -73,11 +58,12 @@ body::after{
 }
 
 #main-title{
-    font-family: 'Montserrat-bold',monospace,sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 #main-para{
-    font-family: 'Montserrat',monospace,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 30px;
 }
 
@@ -96,6 +82,7 @@ body::after{
 #search-bar{
     text-align: left;
     font-size: 16px;
+    color: #777;
     padding: 15px;
     width: 100%;
     margin: 0;
@@ -220,6 +207,17 @@ body::after{
     display: none;
 }
 
+
+#tiktok_song_author_song{
+    font-size: 25px;
+    display: inline-block;
+}
+
+#music{
+    font-size: 18px;
+    display: inline-block;
+}
+
 .col-centered{
     margin: 0 auto !important;
 }
@@ -246,7 +244,7 @@ footer{
     width: 100%;
     background: #00f8f1;
     line-height: 4em;
-    font-family: 'Montserrat',monospace,sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Loader */

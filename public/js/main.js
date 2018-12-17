@@ -71,7 +71,7 @@ $(document).ready(function(){
                             $('#normal_container').show();
                         }else{
                             $('#tiktok_user').text('posted by:' + result.user);
-                            $('#tiktok_song_author_song').text(result.author + ':' + result.song);
+                            $('#tiktok_song_author_song').text(result.author + ': ' + result.song);
                             $('#tiktok_song_cover').attr("src",formatted_cover_link);
                             $('#cover_container').show();
                             $('#download_listen_container').show();
@@ -97,15 +97,6 @@ $(document).ready(function(){
             $url_text_container.show().delay(5000).fadeOut();
         }
       }
-    });
-
-    $('#main-loader')
-    .hide()  // Hide it initially
-    .ajaxStart(function() {
-        $(this).show();
-    })
-    .ajaxStop(function() {
-        $(this).hide();
     });
 
 

@@ -1,31 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130665214-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-130665214-1');
-    </script>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tik Tok video and mp3 downloader</title>
-    <meta name="description" content="Download your favorite Tik Tok videos in a second. You can get your video in the mp3 or mp4 format.">
-    <link rel="icon" href="{{asset('images/logo.svg')}}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- font-awesome -->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/fa.min.css')}}">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-grid.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-reboot.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
-
-</head>
+@include('includes.head')
 <body>
     <div id="cover-screen"></div>
     <!-- Logo -->
@@ -88,9 +63,9 @@
                                             <!-- Card content -->
                                             <div class="card-body card-body-cascade">
                                                 <!-- Label -->
-                                                <h5 class="pink-text pb-2 pt-1"><i class="fa fa-music"></i> Music</h5>
+                                                <span class="pink-text pb-2 pt-1" id="music-label"><i class="fa fa-music"></i> Music</span>
                                                 <!-- Title -->
-                                                <h4 id="tiktok_song_author_song" class="font-weight-bold card-title"></h4>
+                                                <span id="tiktok_song_author_song" class="font-weight-bold card-title"></span>
                                                 <!-- Text -->
                                                 <p id="tiktok_user" class="card-text"></p>
                                             </div>
@@ -121,11 +96,6 @@
     <footer class="text-center">
         TIKTOK DOWNLOADER 2018
     </footer>
-    <script src="{{asset('js/jquery.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-    <!-- font-awesome -->
-    <script src="{{asset('js/fa.min.js')}}"></script>
-    <script src="{{asset('js/main.js')}}"></script>
+    @include('includes.scripts')
 </body>
 </html>
